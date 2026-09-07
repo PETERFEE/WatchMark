@@ -34,7 +34,7 @@ The extension cannot run on Chrome internal pages such as `chrome://extensions`.
 
 - Test on representative webpages and confirm alerts arrive.
 - Replace the EmailJS demo service, template, and public key in `background.js` with production-owned settings.
-- Host and link a public privacy policy. The extension stores the email address and sends the watched value to EmailJS; see `PRIVACY.md`.
+- Host and link a public privacy policy. The extension stores the email address and sends the watched value to EmailJS; see [`docs/privacy-policy.md`](docs/privacy-policy.md).
 - Add store screenshots showing the popup, picker, and a notification.
 - In the Chrome Web Store listing, disclose the `activeTab`, page content access, notifications, storage, and EmailJS network access.
 - Run `pwsh -File .\scripts\package.ps1` and upload the generated ZIP from `releases/` in the Chrome Web Store developer dashboard.
