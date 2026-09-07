@@ -1,0 +1,55 @@
+.popup-body, .popup-body * { box-sizing: border-box; }
+.popup-body { width: 340px; min-height: 430px; margin: 0; padding: 20px; color: #17221b; background: #f4f1e8; font: 13px/1.4 Georgia, serif; }
+.app-header, .tutorial-topline, .section-heading, .tutorial-actions, .email-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.app-header { margin-bottom: 22px; }
+.eyebrow { margin: 0 0 3px; color: #9b4a2f; font: 700 10px/1 Arial, sans-serif; letter-spacing: 1.5px; }
+.popup-body h1, .popup-body h2, .popup-body p { margin-top: 0; }
+.popup-body h1 { margin-bottom: 0; font-size: 23px; letter-spacing: 0; }
+.popup-body h2 { font-size: 22px; line-height: 1.1; margin: 18px 0 10px; }
+.popup-body label, .popup-body strong, .section-heading { font-family: Arial, sans-serif; font-weight: 700; }
+.popup-body label { display: block; margin-bottom: 7px; font-size: 12px; }
+.popup-body input { width: 100%; min-height: 36px; padding: 8px 10px; border: 1px solid #c9c4b6; border-radius: 3px; background: #fffdf7; color: #17221b; font: inherit; }
+.email-row input { flex: 1; min-width: 0; }
+.slider-row { display: flex; align-items: center; gap: 9px; }
+.slider-row input[type="range"] { min-height: 20px; padding: 0; border: 0; accent-color: #17624e; background: transparent; }
+.slider-label { color: #9b4a2f; font: 700 11px Arial, sans-serif; }
+#interval-value { display: block; margin-top: 4px; color: #17624e; font: 700 12px Arial, sans-serif; }
+.popup-body button { cursor: pointer; font: 700 12px Arial, sans-serif; }
+.primary-button, .secondary-button, .danger-button { border: 0; border-radius: 3px; padding: 10px 13px; }
+.primary-button { width: 100%; color: #fffdf7; background: #17624e; }
+.secondary-button { color: #17624e; background: #d9e7d5; white-space: nowrap; }
+.danger-button { width: 100%; margin-top: 13px; color: #fff; background: #9b4a2f; }
+.icon-button { width: 27px; height: 27px; border: 1px solid #9b4a2f; border-radius: 50%; color: #9b4a2f; background: transparent; }
+.text-button { border: 0; padding: 5px 0; color: #17624e; background: transparent; }
+.text-button:disabled { color: #aaa69b; cursor: default; }
+#status { display: block; margin-top: 6px; color: #17624e; font: 11px Arial, sans-serif; visibility: hidden; }
+.interval-section { margin-top: 9px; }
+.field-note, .mode-block p, .active-panel p, .tutorial p { color: #655f54; }
+.field-note { margin: 5px 0 18px; font-size: 11px; }
+.section-heading { padding-bottom: 8px; border-bottom: 1px solid #d5d0c2; }
+.step-badge { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; color: #fff; background: #9b4a2f; font-size: 11px; }
+.mode-block { padding: 14px 0; border-bottom: 1px solid #ded9cc; }
+.mode-block p { margin: 4px 0 10px; font-size: 12px; }
+.active-panel { display: flex; gap: 10px; align-items: flex-start; padding: 13px; border-left: 4px solid #17624e; background: #e1eadb; }
+.active-panel p { margin: 3px 0 0; font-size: 11px; }
+.live-dot { width: 9px; height: 9px; margin-top: 4px; border-radius: 50%; background: #17624e; }
+.tutorial { position: absolute; inset: 0; z-index: 100; min-height: 100%; }
+.tutorial-shade { position: absolute; inset: 0; background: rgba(23, 34, 27, .58); }
+.tutorial-card { position: absolute; top: 12px; right: 12px; bottom: auto; left: 12px; z-index: 102; max-height: calc(100% - 24px); overflow: auto; padding: 12px; border: 2px solid #c28b39; border-radius: 3px; color: #f4f1e8; background: #3d3a35; box-shadow: 0 5px 0 rgba(0, 0, 0, .24); }
+.tutorial-topline { color: #f0c66e; font: 700 11px Arial, sans-serif; }
+.tutorial-target { position: relative; z-index: 101; outline: 3px solid #f0c66e; outline-offset: 3px; box-shadow: 0 0 0 7px rgba(240, 198, 110, .32), 0 0 18px rgba(240, 198, 110, .95); }
+.tutorial-target::after { position: absolute; right: -10px; bottom: -19px; width: 0; height: 0; border-top: 14px solid #f0c66e; border-right: 8px solid transparent; border-left: 8px solid transparent; content: ''; transform: rotate(-28deg); }
+.tutorial-visual { display: grid; place-items: center; height: 64px; margin-top: 14px; color: #f4f1e8; background: #17624e; font: 700 30px Georgia, serif; }
+.tutorial-visual.select { background: #9b4a2f; }
+.tutorial-visual.timer { background: #c28b39; }
+.tutorial-visual.alert { background: #4d6f62; }
+.tutorial-visual.tech { background: #3f5947; }
+.tutorial[data-step="3"] .tutorial-visual { height: 38px; margin-top: 8px; font-size: 24px; }
+.tutorial[data-step="3"] .tutorial-card { padding: 10px; }
+.tutorial[data-step="3"] h2 { margin: 10px 0 6px; font-size: 18px; }
+.tutorial[data-step="3"] p { font-size: 12px; line-height: 1.3; }
+.tutorial[data-step="3"] .tutorial-actions { margin-top: 12px; }
+.tutorial p { margin-bottom: 0; color: #e7e0d2; font-size: 13px; }
+.tutorial-actions { margin-top: 18px; }
+.tutorial-actions .primary-button { width: auto; min-width: 105px; }
+.popup-body [hidden] { display: none !important; }

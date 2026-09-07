@@ -1,0 +1,13 @@
+# Generated release archives
+*.zip
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example

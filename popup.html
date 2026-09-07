@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WatchMark</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-body">
+    <header class="app-header">
+        <div>
+            <p class="eyebrow">MONITOR MASTER</p>
+            <h1>WatchMark</h1>
+        </div>
+        <button id="help-btn" class="icon-button" title="Open tutorial" aria-label="Open tutorial">?</button>
+    </header>
+
+    <main id="main-view">
+        <section class="settings-section">
+            <label for="email">Alert email address</label>
+            <div class="email-row">
+                <input type="email" id="email" placeholder="you@example.com">
+                <button id="save-btn" class="secondary-button">Save</button>
+            </div>
+            <span id="status" role="status">Email saved</span>
+        </section>
+
+        <section class="settings-section interval-section">
+            <label for="refresh-interval">Check page every</label>
+            <div class="slider-row">
+                <span class="slider-label">30s</span>
+                <input type="range" id="refresh-interval" min="30" max="300" step="30" value="30" aria-valuetext="30 seconds">
+                <span class="slider-label">5m</span>
+            </div>
+            <output id="interval-value" for="refresh-interval">30 seconds</output>
+            <p class="field-note">The page reloads at this interval while monitoring.</p>
+        </section>
+
+        <section id="controls" class="monitor-section">
+            <div class="section-heading"><span>Choose what to watch</span><span class="step-badge">1</span></div>
+            <div class="mode-block">
+                <strong>Point and click</strong>
+                <p>Start this mode, then click any element on the webpage.</p>
+                <button id="picker-btn" class="primary-button">Start picker monitor</button>
+            </div>
+            <div class="mode-block">
+                <strong>Highlight text</strong>
+                <p>Select the seat status or any text, then start this monitor.</p>
+                <button id="highlight-btn" class="primary-button">Start highlight monitor</button>
+            </div>
+        </section>
+
+        <section id="active-panel" class="active-panel" hidden>
+            <span class="live-dot"></span>
+            <div><strong>Monitoring is active</strong><p>Updates will appear here and by email.</p></div>
+        </section>
+        <button id="stop-btn" class="danger-button" hidden>Stop monitoring</button>
+    </main>
+
+    <section id="tutorial" class="tutorial" hidden aria-labelledby="tutorial-title">
+        <div class="tutorial-shade"></div>
+        <div class="tutorial-card">
+            <div class="tutorial-topline"><span id="tutorial-progress">1 / 7</span><button id="close-tutorial" class="text-button">Skip</button></div>
+            <div id="tutorial-content"></div>
+            <div class="tutorial-actions"><button id="tutorial-back" class="text-button">Back</button><button id="tutorial-next" class="primary-button">Next</button></div>
+        </div>
+    </section>
+
+    <script src="popup.js"></script>
+</body>
+</html>
